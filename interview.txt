@@ -1,0 +1,220 @@
+<!-- Q 1 – What is React ? -->
+Ans :-  React is free and open source frontend  library which is usefull in developing user interfaces for applications with a single page, It is helpful  in building complex and reusable user interface(UI) components of Mobile and Web application as it follows the component-based approach.
+ ** The important features of React are **
+*  It support server-side rendering.
+* It will make use of virtual Dom rather then real Dom (Data Object Model) as real Dom manipulations are expensive.
+* It follows unidirectional data binding or data flow.
+* it uses reusable or composable UI components for developing the view.
+
+
+<!-- Q 2 - What is Virtual Dom ? -->
+Ans :- The virtual DOM is a virtual representation of the real DOM. Each time the data changes in a react app, a new virtual DOM gets created. Creating a virtual DOM is much faster than rendering the UI inside the browser. Therefore, with the use of virtual DOM, the efficiency of the app improves.
+
+
+<!-- Q3- Components in React ?  -->
+Ans :- Components are the building blocks of creating User Interfaces(UI) in React. There are two possible ways to create a component.
+i.	Function Components: This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as the first parameter and return React elements to render the output:
+function Greeting({ message }) {
+  return <h1>{`Hello, ${message}`}</h1>;
+}
+ii.	Class Components: You can also use ES6 class to define a component. The above function component can be written as a class component:
+class Greeting extends React.Component {
+  render() {
+    return <h1>{`Hello, ${this.props.message}`}</h1>;
+  }
+}
+
+<!-- Q4- What is JSX ? -->
+Ans - JSX stands for JavaScript XML. It is a React extension which allows writing JavaScript code that looks similar to HTML. It makes HTML file easy to understand. The JSX file makes the React application robust and boosts its performance.
+
+<!-- Q5 -Difference between functional and class component ? -->
+Ans:- Function Components: This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as the first parameter and return React elements to render the output:
+function Greeting({ message }) {
+  return <h1>{`Hello, ${message}`}</h1>;
+}
+Class Components: You can also use ES6 class to define a component. The above function component can be written as a class component:
+class Greeting extends React.Component {
+  render() {
+    return <h1>{`Hello, ${this.props.message}`}</h1>;
+  }
+}
+
+
+<!-- Q6 What is the LifeCycle method in  React Page ? -->
+Ans :- There are four different phases in the lifecycle of React component. They are:
+
+<!-- Initialization: -->
+ During this phase, React component will prepare by setting up the default props and initial state for the upcoming tough journey.
+<!-- Mounting: -->
+ Mounting refers to putting the elements into the browser DOM. Since React uses VirtualDOM, the entire browser DOM which has been currently rendered would not be refreshed. This phase includes the lifecycle methods componentWillMount and componentDidMount.
+<!-- Updating:  -->
+In this phase, a component will be updated when there is a change in the state or props of a component. This phase will have lifecycle methods like componentWillUpdate, shouldComponentUpdate, render, and componentDidUpdate.
+<!-- Unmounting:  -->
+In this last phase of the component lifecycle, the component will be removed from the DOM or will be unmounted from the browser DOM. This phase will have the lifecycle method named componentWillUnmount.
+
+<!-- Q7 Strict Mode in react ? -->
+ Ans: StrictMode in React is a React Developer Tool primarily used for highlighting possible problems in a web application. It activates additional deprecation checks and warnings for its child components.
+
+ <!-- Q8 What is package.json file does ? -->
+ Ans: package.json is used to store the metadata associated with the project as well as to store the list of dependency packages. In order to add dependency packages to your projects, you need to create package.json file. The file makes it easy for others to manage and install the packages associated with the project.
+
+ A package.json file:
+ 
+ lists the packages your project depends on
+ specifies versions of a package that your project can use.
+ makes your build reproducible, and therefore easier to share with other developers.
+
+ <!-- Q9 Explain React state and props? -->
+ Props are used to pass data from a parent component to a child component, while state is used to manage data within a component. Props are immutable and cannot be changed within a component, while state is mutable and can be updated using the setState function.
+
+ <!-- Q 10 - What is SetState method ? -->
+ setState() enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state. This is the primary method you use to update the user interface in response to event handlers and server responses.
+
+ <!-- Q 11 How  to prevent re-render in React ? -->
+ 1. Use `React.memo` to memoize components: `React.memo` is a higher-order component that can be used to memoize functional components. It prevents re-rendering when the component's props remain the same (https://www.debugbear.com/blog/react-rerenders). By wrapping a component with `React.memo`, you can ensure that it only renders when its dependencies (props) are changed.
+
+2. Use `useMemo` and `useCallback` hooks: The `useMemo` hook allows you to memoize values and only recompute them if their dependencies change. The `useCallback` hook is similar but specifically for memoizing function references. By using these hooks, you can avoid unnecessary re-computation of values or re-creation of function references, which can lead to unneeded re-renders.
+
+3. Optimize component state: Ensure that you are managing component state efficiently. Avoid storing unnecessary data or state that doesn't affect the component's rendering. Consider using `useReducer` or a custom state management solution if your current approach is causing unnecessary re-renders.
+
+4. Avoid passing unnecessary props: Be mindful of the props you pass to child components. If a child component does not rely on a prop, avoid passing it to prevent unnecessary re-renders in the child component.
+
+
+<!-- Q 12 What are Hooks ? -->
+Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don't work inside classes — they let you use React without classes. 
+
+
+<!--Q 13 What are Keys in React ? -->
+A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted. Keys are used to give an identity to the elements in the lists.
+
+<!-- Q 14 What are higher order components ? -->
+Higher-order components (HOCs) are a powerful feature of the React library. They allow you to reuse component logic across multiple components. In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component.
+
+<!--Q 15 What are error boundaries ? -->
+Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them
+
+<!--Q 16 What is React Routers ? -->
+React Router is a JavaScript framework that lets us handle client and server-side routing in React applications. It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. It also allows us to use browser history features while preserving the right application view
+
+
+
+<!--Q 17 What are Context & Context API ? -->
+Context, in React, is a way to pass data down through a component tree without having to pass props down through every level. This can be very helpful since this allows us to share data between components that are not directly related to each other (e.g., between sibling components)
+
+
+Context API is used to pass global variables anywhere in the code. It helps when there is a need for sharing state between a lot of nested components. It is light in weight and easier to use, to create a context just need to call React. createContext().
+
+<!--Q 18 How you pass data from child to parent component? -->
+In React, you can pass information from a child component to a parent component using React's props system. To do this, you can call the setState() method within the child component, which will update the state in the parent component and trigger it to re-render.
+4
+<!--Q 19 What is ref in react -->
+Refs are a function provided by React to access the DOM element and the React elements created in components. They are used in cases where we want to change the value of a child component, without making use of props and state.
+
+<!-- Q 20 what is Lazy loading in React ? -->
+Ans : Lazy loading in React allows you to split your code into smaller chunks, loading only the code that is needed for a particular part of your application when it is actually required. This can improve the initial loading time of your application.
+
+<!-- Q 21 what is Suspense ? -->
+Ans: React suspense is a built-in React component which lets you temporarily render a fallback UI while its children are still loading. Content delivery and site performance are important factors for web applications. You must deliver content quickly and effectively for better user experience
+
+<!-- Q22 what is UseState -->
+Ans : useState is a React Hook that lets you add a state variable to your component. const [state, setState] = useState(initialState) useState(initialState) set functions, like setSomething(nextState)
+
+<!-- Q 23 what is useeffect in react -->
+Ans : React useEffect hook handles the effects of the dependency array. The useEffect Hook allows us to perform side effects on the components. fetching data, directly updating the DOM and timers are some side effects. It is called every time any state if the dependency array is modified or updated.
+
+<!-- Q 24 what is reconciliation in react -->
+Ans:Reconciliation is React's way of diffing the virtual DOM tree with the updated virtual DOM to determine the most efficient way to update the real DOM. This process allows React to apply only the necessary changes to the DOM, avoiding the costly operation of updating the entire DOM tree.
+
+<!-- 
+Q 25 What is the difference between Element and Component? -->
+Ans : In React, an element is the smallest building block while the component is a reusable piece of the code.
+
+<!-- Q 26 When to use a Class Component over a Function Component? -->
+Ans: Now that we know what components are, let’s try to understand when should we use class or function components. We need to understand the concept of the state of the component first. You can refer to this article for a better understanding of React state.
+
+In the case of class components, when the state of the component is changed then the render method is called. Whereas, function components render the interface whenever the props are changed.
+
+Although we should prefer using function components most times as React also allows using state with function components in React version 16.8 and later by using the useState hook, which is also recommended by Meta (Facebook App) itself. But for the older react versions, we can use class components where we have a dependency on the state of the components.
+
+<!-- Q27 What are Pure Components? -->
+ Ans : Pure components are primarily used for rendering UI based on props only. Impure components can perform side effects, such as making API calls or modifying global state. Pure components have better performance as they can be optimized by React's reconciliation algorithm. They only re-render when their props change.
+
+ Q28 What is the purpose of callback function as an argument of setState()?
+ Ans : What is the purpose of callback function as an argument of setState event ? In React, the purpose of callback function as an argument of setState event is to execute the code after the data in the state is modified.
+
+ Q29 : What is the difference between HTML and React event handling?
+Ans : Difference between HTML and React event handling
+React event handling is similar to HTML with some changes in syntax, such as: React uses camelCase for event names while HTML uses lowercase. Instead of passing a string as an event handler, we pass a function in React.
+
+Q30 :What is the difference between Shadow DOM and Virtual DOM?
+Ans: ShadowDOM is the concept that refers to the encapsulation of DOM elements and components while VIrtualDOM is virtual representation of DOM that optimizes the Updates to the RealDOM. The Document Object Model (DOM) is a popular concept followed in client-side development.
+
+Q31 : What is context? in react?
+Ans : React Context is a way to manage state globally. It can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone.
+
+Q 32 :What is children prop?
+Ans :Children is a prop ( this. props. children ) that allow you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.
+
+Q32 : Why React uses className over class attribute?
+Ans : The only reason behind the fact that it uses className over class is that the class is a reserved keyword in JavaScript and since we use JSX in React which itself is the extension of JavaScript, so we have to use className instead of class attribute.
+
+Q 33 : What are fragments? Why fragments are better than container divs?
+Ans : Therefore, React fragments are better than the 'div' tags.
+With React Fragment, you can render multiple elements of a component without adding extra div tags. We can write cleaner, more readable code with React Fragments. It takes up less memory and renders components faster. Each component is rendered as expected.
+
+
+Q34 : What are stateless and stateful components?
+Ans : They simply receive 'props' and render them to the UI. Stateful components are required when data changes over time, and the component needs to know about the update to render it. Stateless components, on the other hand, are mostly used for static components, where the data presented doesn't need to be updated.
+
+Q35 : What are the advantages of React?
+Ans: Improved User Experience. ...
+Virtual DOM and Performance Optimization. ...
+Reusable Components and Code Reusability. ...
+Efficient Development Process. ...
+Strong Community Support. ...
+SEO-Friendly Applications. ...
+Scalability and Flexibility. ...
+Easy Integration with Other Technologies. 
+
+
+Q36 What are the limitations of React? 
+Ans : Here are some of the limitations of React: It is a library, not a framework. This means that React does not provide everything you need to build a web application. You will need to use other libraries and tools to manage state, routing, and other aspects of your
+
+
+Q37 : What are some of the limitations of React?
+Ans : Here are some of the limitations of React: It is a library, not a framework. This means that React does not provide everything you need to build a web application. You will need to use other libraries and tools to manage state, routing, and other aspects of your application.
+
+
+Q38 : How do you conditionally render components?
+Ans : Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them. This example renders a different greeting depending on the value of isLoggedIn prop.
+
+Q 39 : How to prevent a function from being called multiple times?
+When a function is used to render animation or calculate the positions of elements, we can use RequestAnimationFrame to prevent it from being fired too many times. const rafId = requestAnimationFrame(callback); 
+
+
+Q40 : How to prevent component from rendering?
+Ans : To prevent a component from rendering in React JS we will use the concept of conditional rendering. We will apply some conditions on for the component and they will render on the UI only if the condition is satisfied.
+
+Q41 : What is prevent default ?
+Ans : The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+
+Q42 : How to loop inside JSX?
+Ans : Using the map() Method
+
+You can use the map() method on an array to loop through the elements and create components, or generate JSX, inside the return block. import React from "react"; function App() { const seasons = ["Spring", "Summer", "Autumn", "Winter"]; return ( <div> <h2>Seasons of the year</h2> <ul>
+
+
+Q43 : What is the difference between React and ReactDOM??
+Ans : While React provides the tools and concepts to define component-based user interfaces, ReactDOM handles the task of rendering those interfaces in a web environment. Together, they form the foundation of React web applications.
+
+Q 44 : Why you can't update props in React?
+Ans : Props are read-only snapshots in time: every render receives a new version of props. You can't change props. When you need interactivity, you'll need to set state.
+
+Q 45 :Is it possible to use async/await in plain React?
+Ans : : No, you cannot use async/await directly in a React component's render method. The render method should be synchronous and should not contain any side effects. You should use async functions in the appropriate lifecycle methods or hooks, as shown in the examples above 
+
+
+
+
+
+

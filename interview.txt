@@ -7,6 +7,7 @@ Ans :-  React is free and open source frontend  library which is usefull in deve
 * it uses reusable or composable UI components for developing the view.
 
 
+
 <!-- Q 2 - What is Virtual Dom ? -->
 Ans :- The virtual DOM is a virtual representation of the real DOM. Each time the data changes in a react app, a new virtual DOM gets created. Creating a virtual DOM is much faster than rendering the UI inside the browser. Therefore, with the use of virtual DOM, the efficiency of the app improves.
 
